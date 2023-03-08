@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
 :root {
-  --color-bg: #fff;
+  --color-bg: #ffcf00;
   --color-border: #e5e7eb;
   --color-sidebar-item: #f3f4f6;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar {
-  width: 17rem;
+  width: 18rem;
   height: 100%;
   background-color: var(--color-bg);
   padding: 1rem;
@@ -52,8 +52,8 @@ body {
 }
 
 .sidebar__logo {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 254px;
+  height: 245px;
   object-fit: contain;
   border-radius: 1rem;
 }
@@ -81,7 +81,7 @@ body {
 
 .sidebar__link--active {
   color: #fff;
-  background-color: #10b981;
+  background-color: #a38112;
 }
 
 .sidebar__icon {
@@ -92,7 +92,7 @@ body {
 .sidebar__name {
   margin-left: 0.5rem;
 }
-
+/* 
 [data-collapse="true"] {
   width: 5.3rem;
 }
@@ -100,9 +100,9 @@ body {
 [data-collapse="true"] .sidebar__name,
 [data-collapse="true"] .sidebar__logo-name {
   display: none;
-}
+} */
 
-.btn {
+/* .btn {
   position: absolute;
   right: 0;
   top: 4.7rem;
@@ -118,4 +118,38 @@ body {
   cursor: pointer;
   transform: translateX(50%);
   font-size: 1.1rem;
+} */
+
+.sidebar__link2 {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  padding: 0.8rem 1rem;
+  display: flex;
+  background-color: var(--color-sidebar-item);
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+}
+
+.sidebar__namebisnis {
+  display: inline-block;
+  margin-left: 0.5rem;
+  justify-content: center;
+}
+
+.icondropdown {
+  font-size: 1.5rem;
+  margin-left: 6rem;
+}
+
+.sidebar__link--active2 {
+  color: #fff;
+  background-color: #a38112;
+}
+
+.arrow {
+  margin-left: 5.4rem;
+  height: 1rem;
+  font-size: 1.5rem;
 }
