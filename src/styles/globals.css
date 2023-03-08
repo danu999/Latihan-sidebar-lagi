@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar {
-  width: 18rem;
+  width: 20rem;
   height: 100%;
   background-color: var(--color-bg);
   padding: 1rem;
@@ -56,11 +56,7 @@ body {
   height: 245px;
   object-fit: contain;
   border-radius: 1rem;
-}
-
-.sidebar__logo-name {
-  font-size: 1.2rem;
-  font-weight: 600;
+  margin-left: 1rem;
 }
 
 .sidebar__list {
