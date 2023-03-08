@@ -56,11 +56,11 @@ body {
   height: 245px;
   object-fit: contain;
   border-radius: 1rem;
-  margin-left: 1rem;
+  margin-left: 0.9rem;
 }
 
 .sidebar__list {
-  list-style: none;
+  list-style: none; 
 }
 
 .sidebar__link {
@@ -145,7 +145,7 @@ body {
 }
 
 .arrow {
-  margin-left: 5.4rem;
+  margin-left: 8rem;
   height: 1rem;
   font-size: 1.5rem;
 }
