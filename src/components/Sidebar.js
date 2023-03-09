@@ -16,8 +16,9 @@ import { MdStore } from "react-icons/md";
 import { AiFillCar } from "react-icons/ai";
 import { GiTeacher } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { motion } from "framer-motion";
 import { useState } from "react";
-
+// import { Button } from
 
 const sidebarItems = [
   {
@@ -57,8 +58,8 @@ const sidebarItems = [
   },
   {
     name: "Sub Bisnis",
-    href: "/subbisnis",
     icon: MdDialpad,
+    href: "/subbisnis",
     subMenus: [
       {
         name: "Kantin",
@@ -67,12 +68,12 @@ const sidebarItems = [
       },
       {
         name: "RentCar",
-        href: "/kantin",
+        href: "/rentcar",
         icon: AiFillCar,
       },
       {
         name: "Bimtek",
-        href: "/kantin",
+        href: "/bimtek",
         icon: GiTeacher,
       },
     ],
@@ -80,9 +81,13 @@ const sidebarItems = [
 ];
 
 const Sidebar = () => {
-  const router = useRouter();
-  const [open, setOpen] = useState(true);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const handleSubMenuClick = () => {
+    setSubMenuOpen(!subMenuOpen);
+  };
+  // const [subMenuOpen, setSubMenuOpen] = useState(false);
   // const toggleMenu = () => {
   //   setOpen(!open);
   // };
@@ -107,24 +112,44 @@ const Sidebar = () => {
           {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
         </div>
         <ul className="sidebar__list">
-          {sidebarItems.map(({ name, href, icon: Icon }) => {
-            if ( name === "Sub Bisnis" ) {
+          {sidebarItems.map(({ name, href, icon: Icon, subMenus }) => {
+            if (name === "Sub Bisnis") {
               return (
                 <li className="sidebar__item" key={name}>
-                <Link
-                  className={`sidebar__link ${
-                    router.pathname === href ? "sidebar__link--active" : ""
-                  }`}
-                  href={href}
-                >
-                  <span className="sidebar__icon">
-                    <Icon />
-                  </span>
-                  <span className="sidebar__name">{name}</span>
-                  <span className="arrow"><MdKeyboardArrowDown /></span>
-                </Link>
-              </li>
-              )
+                  <div
+                    className={`sidebar__link ${
+                      router.pathname === href ? "sidebar__link--active" : ""
+                    }`}
+                    onClick={handleSubMenuClick}
+                  >
+                    <span className="sidebar__icon">
+                      <Icon />
+                    </span>
+                    <span className="sidebar__name">{name}</span>
+                    <span className="arrow">
+                      <MdKeyboardArrowDown />
+                    </span>
+                  </div>
+                  {subMenuOpen && (
+                    <ul className="sidebar__submenu">
+                      {subMenus.map(({ name, href, icon: Icon }) => (
+                        <li key={name}>
+                          <Link href={href}>
+                            <div className="sidebar__submenu-link">
+                              <span className="sidebar__submenu-icon">
+                                <Icon />
+                              </span>
+                              <span className="sidebar__submenu-name">
+                                {name}
+                              </span>
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
             }
             return (
               <li className="sidebar__item" key={name}>
