@@ -1,6 +1,3 @@
-//import { SidebarContext } from "@/context/SidebarContext";
-//import { useContext } from "react";
-// import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,7 +14,7 @@ import { AiFillCar } from "react-icons/ai";
 import { GiTeacher } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
-// import { Button } from
+
 
 const sidebarItems = [
   {
