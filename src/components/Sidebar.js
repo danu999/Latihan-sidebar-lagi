@@ -119,7 +119,6 @@ const Sidebar = () => {
                       className={`sidebar__link ${
                         router.pathname === href ? "sidebar__link--active" : ""
                       } ${subMenuOpen ? "rotate" : ""}`}
-                      href={href}
                       onClick={handleSubMenuClick}
                     >
                       <span className="sidebar__icon">
