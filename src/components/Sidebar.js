@@ -17,6 +17,8 @@ import { AiFillCar } from "react-icons/ai";
 import { GiTeacher } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
+
+
 const sidebarItems = [
   {
     name: "Dashboard",
@@ -79,8 +81,11 @@ const sidebarItems = [
 
 const Sidebar = () => {
   const router = useRouter();
-  const [isOpen, setisOpen] = useState(false);
-  const toggle = () => setisOpen(!isOpen);
+  const [open, setOpen] = useState(true);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
+  // const toggleMenu = () => {
+  //   setOpen(!open);
+  // };
 
   // const { isCollapsed, toggleSidebarcollapse } = useContext(SidebarContext);
 
