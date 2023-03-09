@@ -114,10 +114,12 @@ const Sidebar = () => {
               if (name === "Sub Bisnis") {
                 return (
                   <li className="sidebar__item" key={name}>
-                    <div style={{cursor: "pointer"}}
+                    <div
+                      style={{ cursor: "pointer" }}
                       className={`sidebar__link ${
                         router.pathname === href ? "sidebar__link--active" : ""
                       } ${subMenuOpen ? "rotate" : ""}`}
+                      href={href}
                       onClick={handleSubMenuClick}
                     >
                       <span className="sidebar__icon">
