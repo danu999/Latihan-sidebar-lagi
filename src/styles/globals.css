@@ -148,6 +148,7 @@ body {
   margin-left: 8rem;
   height: 1rem;
   font-size: 1.5rem;
+  margin-top: 0.2rem;
 }
 
 .sidebar__submenu {
@@ -166,4 +167,12 @@ body {
 .sidebar__scroll-container {
   height: calc(115vh - 50px);
   overflow: auto;
+}
+
+.sidebar__link .arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar__link.rotate .arrow {
+  transform: rotate(180deg);
 }

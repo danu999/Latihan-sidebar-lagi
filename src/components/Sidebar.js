@@ -16,7 +16,6 @@ import { MdStore } from "react-icons/md";
 import { AiFillCar } from "react-icons/ai";
 import { GiTeacher } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { motion } from "framer-motion";
 import { useState } from "react";
 // import { Button } from
 
@@ -86,6 +85,8 @@ const Sidebar = () => {
 
   const handleSubMenuClick = () => {
     setSubMenuOpen(!subMenuOpen);
+    const arrow = document.querySelector(".arrow");
+  arrow.classList.toggle("rotate");
   };
   // const [subMenuOpen, setSubMenuOpen] = useState(false);
   // const toggleMenu = () => {
@@ -120,7 +121,7 @@ const Sidebar = () => {
                     <div
                       className={`sidebar__link ${
                         router.pathname === href ? "sidebar__link--active" : ""
-                      }`}
+                      } ${subMenuOpen ? "rotate" : ""}`}
                       onClick={handleSubMenuClick}
                     >
                       <span className="sidebar__icon">
