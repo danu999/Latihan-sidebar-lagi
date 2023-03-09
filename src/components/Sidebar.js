@@ -15,7 +15,6 @@ import { GiTeacher } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
 
-
 const sidebarItems = [
   {
     name: "Dashboard",
@@ -83,7 +82,7 @@ const Sidebar = () => {
   const handleSubMenuClick = () => {
     setSubMenuOpen(!subMenuOpen);
     const arrow = document.querySelector(".arrow");
-  arrow.classList.toggle("rotate");
+    arrow.classList.toggle("rotate");
   };
   // const [subMenuOpen, setSubMenuOpen] = useState(false);
   // const toggleMenu = () => {
@@ -115,7 +114,7 @@ const Sidebar = () => {
               if (name === "Sub Bisnis") {
                 return (
                   <li className="sidebar__item" key={name}>
-                    <div
+                    <div style={{cursor: "pointer"}}
                       className={`sidebar__link ${
                         router.pathname === href ? "sidebar__link--active" : ""
                       } ${subMenuOpen ? "rotate" : ""}`}

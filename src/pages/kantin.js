@@ -1,7 +1,7 @@
 import BaseLayout from "@/components/BaseLayout";
 
-const SubBisnis = () => {
-  return <BaseLayout>SubBisnis Page</BaseLayout>;
+const Kantin = () => {
+  return <BaseLayout>Kantin</BaseLayout>;
 };
 
-export default SubBisnis;
+export default Kantin;

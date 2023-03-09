@@ -88,33 +88,6 @@ body {
 .sidebar__name {
   margin-left: 0.5rem;
 }
-/* 
-[data-collapse="true"] {
-  width: 5.3rem;
-}
-
-[data-collapse="true"] .sidebar__name,
-[data-collapse="true"] .sidebar__logo-name {
-  display: none;
-} */
-
-/* .btn {
-  position: absolute;
-  right: 0;
-  top: 4.7rem;
-  border: none;
-  background-color: var(--color-bg);
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transform: translateX(50%);
-  font-size: 1.1rem;
-} */
 
 .sidebar__link2 {
   display: inline-block;
@@ -138,10 +111,12 @@ body {
   font-size: 1.5rem;
   margin-left: 6rem;
 }
+.sidebar__link .arrow {
+  transition: transform 0.3s ease-in-out;
+}
 
-.sidebar__link--active2 {
-  color: #fff;
-  background-color: #a38112;
+.sidebar__link.rotate .arrow {
+  transform: rotate(180deg);
 }
 
 .arrow {
@@ -152,27 +127,69 @@ body {
 }
 
 .sidebar__submenu {
-  display: inline-block;
-  font-size: 1rem;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__submenu li {
+  position: relative;
+}
+
+.sidebar__submenu-link {
+  display: block;
+  align-items: center;
+  padding: 10px 15px;
+  color: #333;
   text-decoration: none;
-  color: #000;
-  padding: 0.8rem 1rem;
-  display: flex;
-  background-color: var(--color-sidebar-item);
-  margin-bottom: 1rem;
-  border-radius: 0.8rem;
-  margin-top: 1rem;
 }
 
-.sidebar__scroll-container {
-  height: calc(115vh - 50px);
-  overflow: auto;
+.sidebar__submenu-link:hover {
+  background-color: #f2f2f2;
 }
 
-.sidebar__link .arrow {
-  transition: transform 0.3s ease-in-out;
+/* hide submenu by default */
+.sidebar__submenu ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar__link.rotate .arrow {
-  transform: rotate(180deg);
+/* show submenu on hover */
+.sidebar__submenu li:hover > ul {
+  display: block;
+}
+
+/* style submenu links */
+.sidebar__submenu ul li {
+  position: relative;
+}
+
+.sidebar__submenu ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* make submenu items vertical */
+.sidebar__submenu ul li {
+  display: block;
+}
+
+.sidebar__submenu-icon {
+  font-size: 1.4rem;
+}
+
+.sidebar__submenu-name {
+  margin-left: 0.5rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  
 }
