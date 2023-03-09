@@ -95,80 +95,82 @@ const Sidebar = () => {
   // const { isCollapsed, toggleSidebarcollapse } = useContext(SidebarContext);
 
   return (
-    <div className="sidebar__wrapper">
-      {/* <button className="btn" onClick={toggleSidebarcollapse}>
+    <div className="sidebar__scroll-container">
+      <div className="sidebar__wrapper">
+        {/* <button className="btn" onClick={toggleSidebarcollapse}>
         {isCollapsed ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
       </button> */}
-      {/* data-collapse={isCollapsed} */}
-      <aside className="sidebar">
-        <div className="sidebar__top">
-          <Image
-            width={80}
-            height={80}
-            className="sidebar__logo"
-            src="/logo1.png"
-            alt="logo"
-          />
-          {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
-        </div>
-        <ul className="sidebar__list">
-          {sidebarItems.map(({ name, href, icon: Icon, subMenus }) => {
-            if (name === "Sub Bisnis") {
+        {/* data-collapse={isCollapsed} */}
+        <aside className="sidebar">
+          <div className="sidebar__top">
+            <Image
+              width={80}
+              height={80}
+              className="sidebar__logo"
+              src="/logo1.png"
+              alt="logo"
+            />
+            {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
+          </div>
+          <ul className="sidebar__list">
+            {sidebarItems.map(({ name, href, icon: Icon, subMenus }) => {
+              if (name === "Sub Bisnis") {
+                return (
+                  <li className="sidebar__item" key={name}>
+                    <div
+                      className={`sidebar__link ${
+                        router.pathname === href ? "sidebar__link--active" : ""
+                      }`}
+                      onClick={handleSubMenuClick}
+                    >
+                      <span className="sidebar__icon">
+                        <Icon />
+                      </span>
+                      <span className="sidebar__name">{name}</span>
+                      <span className="arrow">
+                        <MdKeyboardArrowDown />
+                      </span>
+                    </div>
+                    {subMenuOpen && (
+                      <ul className="sidebar__submenu">
+                        {subMenus.map(({ name, href, icon: Icon }) => (
+                          <li key={name}>
+                            <Link href={href}>
+                              <div className="sidebar__submenu-link">
+                                <span className="sidebar__submenu-icon">
+                                  <Icon />
+                                </span>
+                                <span className="sidebar__submenu-name">
+                                  {name}
+                                </span>
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              }
               return (
                 <li className="sidebar__item" key={name}>
-                  <div
+                  <Link
                     className={`sidebar__link ${
                       router.pathname === href ? "sidebar__link--active" : ""
                     }`}
-                    onClick={handleSubMenuClick}
+                    href={href}
                   >
                     <span className="sidebar__icon">
                       <Icon />
                     </span>
                     <span className="sidebar__name">{name}</span>
-                    <span className="arrow">
-                      <MdKeyboardArrowDown />
-                    </span>
-                  </div>
-                  {subMenuOpen && (
-                    <ul className="sidebar__submenu">
-                      {subMenus.map(({ name, href, icon: Icon }) => (
-                        <li key={name}>
-                          <Link href={href}>
-                            <div className="sidebar__submenu-link">
-                              <span className="sidebar__submenu-icon">
-                                <Icon />
-                              </span>
-                              <span className="sidebar__submenu-name">
-                                {name}
-                              </span>
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  </Link>
                 </li>
               );
-            }
-            return (
-              <li className="sidebar__item" key={name}>
-                <Link
-                  className={`sidebar__link ${
-                    router.pathname === href ? "sidebar__link--active" : ""
-                  }`}
-                  href={href}
-                >
-                  <span className="sidebar__icon">
-                    <Icon />
-                  </span>
-                  <span className="sidebar__name">{name}</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </aside>
+            })}
+          </ul>
+        </aside>
+      </div>
     </div>
   );
 };
