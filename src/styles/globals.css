@@ -77,7 +77,8 @@ body {
 
 .sidebar__link--active {
   color: #fff;
-  background-color: #796d49;
+  background-color: #ccaa44;
+  border-radius: 1rem;
 }
 
 .sidebar__icon {

@@ -104,7 +104,7 @@ const Sidebar = () => {
               width={80}
               height={80}
               className="sidebar__logo"
-              src="/logo1.png"
+              src="/logo.png"
               alt="logo"
             />
             {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
@@ -134,7 +134,13 @@ const Sidebar = () => {
                         {subMenus.map(({ name, href, icon: Icon }) => (
                           <li key={name}>
                             <Link href={href}>
-                              <div className="sidebar__submenu-link">
+                              <div
+                                className={`sidebar__submenu-link ${
+                                  router.pathname === href
+                                    ? "sidebar__link--active"
+                                    : ""
+                                }`}
+                              >
                                 <span className="sidebar__submenu-icon">
                                   <Icon />
                                 </span>
