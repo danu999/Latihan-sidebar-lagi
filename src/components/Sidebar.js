@@ -92,13 +92,14 @@ const Sidebar = () => {
   // const { isCollapsed, toggleSidebarcollapse } = useContext(SidebarContext);
 
   return (
-    <div classname="sidebar_mini_container">
+    <div classname="sidebar_scrool">
       <div className="sidebar__wrapper">
         {/* <button className="btn" onClick={toggleSidebarcollapse}>
         {isCollapsed ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
       </button> */}
         {/* data-collapse={isCollapsed} */}
         <aside className="sidebar">
+        <div className="rectangle"></div>
           <div className="sidebar__top">
             <Image
               width={80}
@@ -107,9 +108,10 @@ const Sidebar = () => {
               src="/logo.png"
               alt="logo"
             />
-            
             {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
           </div>
+          <h1 className="sidebar__logo-name">Koperasi Primadaya Migas</h1>
+          <div className="rectanglee"></div>
           <ul className="sidebar__list">
             {sidebarItems.map(({ name, href, icon: Icon, subMenus }) => {
               if (name === "Sub Bisnis") {
@@ -173,8 +175,11 @@ const Sidebar = () => {
                 </li>
               );
             })}
+            
           </ul>
+          
         </aside>
+        
       </div>
     </div>
   );
