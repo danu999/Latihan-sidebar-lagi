@@ -99,7 +99,7 @@ const Sidebar = () => {
       </button> */}
         {/* data-collapse={isCollapsed} */}
         <aside className="sidebar">
-        <div className="rectangle"></div>
+          <div className="rectangle"></div>
           <div className="sidebar__top">
             <Image
               width={80}
@@ -175,11 +175,8 @@ const Sidebar = () => {
                 </li>
               );
             })}
-            
           </ul>
-          
         </aside>
-        
       </div>
     </div>
   );
