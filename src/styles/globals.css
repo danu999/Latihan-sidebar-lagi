@@ -205,3 +205,12 @@ body {
   display: inline-block;
   margin-top: 0.5rem;
 }
+
+/* CARD STYLING */
+
+.card {
+  margin-top: 5rem;
+  width: 20rem;
+  height: 10rem;
+  box-shadow: "5px 8px 24px 5px rgba(208, 216, 243, 0.6)";
+}
