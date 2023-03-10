@@ -108,7 +108,6 @@ const Sidebar = () => {
               src="/logo.png"
               alt="logo"
             />
-            {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
           </div>
           <h1 className="sidebar__logo-name">Koperasi Primadaya Migas</h1>
           <div className="rectanglee"></div>
