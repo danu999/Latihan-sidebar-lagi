@@ -92,7 +92,7 @@ const Sidebar = () => {
   // const { isCollapsed, toggleSidebarcollapse } = useContext(SidebarContext);
 
   return (
-    <div className="sidebar__scroll-container">
+    <div classname="sidebar_mini_container">
       <div className="sidebar__wrapper">
         {/* <button className="btn" onClick={toggleSidebarcollapse}>
         {isCollapsed ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
@@ -107,6 +107,7 @@ const Sidebar = () => {
               src="/logo.png"
               alt="logo"
             />
+            
             {/* <p className="sidebar__logo-name">The Brave Coders</p> */}
           </div>
           <ul className="sidebar__list">

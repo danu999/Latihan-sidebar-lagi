@@ -17,6 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+
 .layout {
   display: flex;
   height: 100vh;
@@ -86,10 +87,6 @@ body {
   font-size: 1.2rem;
 }
 
-.sidebar__name {
-  margin-left: 0.5rem;
-}
-
 .sidebar__link2 {
   display: inline-block;
   font-size: 1rem;
@@ -108,10 +105,6 @@ body {
   justify-content: center;
 }
 
-.icondropdown {
-  font-size: 1.5rem;
-  margin-left: 6rem;
-}
 .sidebar__link .arrow {
   transition: transform 0.3s ease-in-out;
 }
