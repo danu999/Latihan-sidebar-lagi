@@ -220,13 +220,27 @@ body {
   height: 12rem;
   margin-right: 5rem;
   margin-left: 0.8rem;
-  box-shadow: "1px 3px 10px 3px rgba(208, 216, 243, 0.6)";
   border-radius: 5%;
+  background: linear-gradient(to bottom right, #f5ff98, #ffcf00);
 }
 
 .kas {
-  margin-left: 3.5rem;
-  font-size: 1.6rem;
+  margin-left: 4rem;
+  font-size: 1.7rem;
   justify-content: center;
   margin-bottom: 2.5rem;
+}
+
+.title {
+  margin-top: 10rem;
+}
+
+.cardbri_logo {
+  margin-bottom: 2.3rem;
+  border-radius: 10%;
+}
+
+.cardmandiri_logo {
+  margin-bottom: 2.3rem;
+  border-radius: 10%;
 }
