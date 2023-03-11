@@ -34,6 +34,7 @@ const Dashboard = () => {
                 position: "absolute",
                 top: 24,
                 left: 20,
+                boxShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)",
               }}
             />
             <BsFillCreditCardFill
@@ -41,7 +42,7 @@ const Dashboard = () => {
                 color: "orange",
                 fontSize: "2.1rem",
                 position: "absolute",
-                top: "1.6rem",
+                top: "1.7rem",
                 left: "1.7rem",
               }}
             />
@@ -72,6 +73,9 @@ const Dashboard = () => {
               src="/BRI.jpg"
               alt="logo"
               position="absolute"
+              style={{
+                boxShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)",
+              }}
             />
             <Statistic
               classname="title"
@@ -102,6 +106,9 @@ const Dashboard = () => {
               src="/mandiri.png"
               alt="logo"
               position="absolute"
+              style={{
+                boxShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)",
+              }}
             />
             <Statistic
               classname="title"
