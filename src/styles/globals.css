@@ -208,9 +208,25 @@ body {
 
 /* CARD STYLING */
 
+.dashboard {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
 .card {
-  margin-top: 5rem;
+  margin-top: 5.5rem;
   width: 20rem;
-  height: 10rem;
-  box-shadow: "5px 8px 24px 5px rgba(208, 216, 243, 0.6)";
+  height: 12rem;
+  margin-right: 5rem;
+  margin-left: 0.8rem;
+  box-shadow: "1px 3px 10px 3px rgba(208, 216, 243, 0.6)";
+  border-radius: 5%;
+}
+
+.kas {
+  margin-left: 3.5rem;
+  font-size: 1.6rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
 }
