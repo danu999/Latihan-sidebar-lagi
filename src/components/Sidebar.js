@@ -18,7 +18,7 @@ import { useState } from "react";
 const sidebarItems = [
   {
     name: "Dashboard",
-    href: "/",
+    href: "/dashboard",
     icon: MdDashboard,
   },
   {
