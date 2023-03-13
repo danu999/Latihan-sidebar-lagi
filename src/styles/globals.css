@@ -244,3 +244,13 @@ body {
   margin-bottom: 2.3rem;
   border-radius: 10%;
 }
+
+.card_statistic {
+  height: 21px;
+  width: 60px;
+  position: absolute;
+  margin-left: 13rem;
+  border-radius: 10%;
+  margin-top: 0.7rem;
+  background-color: #93ff7d;
+}

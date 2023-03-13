@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { Card, Space, Statistic, Typography } from "antd";
+import { Card, Space, Statistic, Col, Row, Typography } from "antd";
 import { Paper } from "@mui/material";
 import BaseLayout from "../components/BaseLayout";
 import React from "react";
-import { BsFillCreditCardFill, BsThreeDotsVertical } from "react-icons/bs";
+import { BsFillCreditCardFill, BsJustify, BsThreeDotsVertical } from "react-icons/bs";
+import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 
 const Dashboard = () => {
   return (
@@ -47,7 +48,30 @@ const Dashboard = () => {
               }}
             />
             <p className="kas">KAS</p>
-            <Statistic title="Total Saldo" value={"Rp. 6.000.000,00"} />
+            <Statistic
+              title="Total Saldo"
+              value={"Rp. 6.000.000,00"}
+              valueStyle={{ position: "absolute" }}
+            />
+            <Row gutter={1}>
+              <Col span={1}>
+                <Card className="card_statistic" style={{boxShadow: "1px 1px 3px 1px #A9A9A9"}}>
+                  <Statistic
+                    value={1.5}
+                    valueStyle={{
+                      color: "#3f8600",
+                      fontSize: "13px",
+                      display: "flex",
+                      position:"absolute",
+                      top:"0px",
+                      left:"0.2rem"
+                    }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="%"
+                  />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Space>
 
@@ -81,7 +105,27 @@ const Dashboard = () => {
               classname="title"
               title="Total Saldo"
               value={"Rp. 5.920.000,00"}
+              valueStyle={{ position: "absolute" }}
             />
+            <Row gutter={1}>
+              <Col span={1}>
+                <Card className="card_statistic" style={{boxShadow: "1px 1px 3px 1px #A9A9A9"}}>
+                  <Statistic
+                    value={2.1}
+                    valueStyle={{
+                      color: "#3f8600",
+                      fontSize: "13px",
+                      display: "flex",
+                      position:"absolute",
+                      top:"0rem",
+                      left:"0.2rem"
+                    }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="%"
+                  />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Space>
         <Space direction="horizontal">
@@ -114,7 +158,27 @@ const Dashboard = () => {
               classname="title"
               title="Total Saldo"
               value={"Rp. 6.920.000,00"}
+              valueStyle={{ position: "absolute" }}
             />
+            <Row gutter={1}>
+              <Col span={1}>
+                <Card className="card_statistic" style={{boxShadow: "1px 1px 3px 1px #A9A9A9"}}>
+                  <Statistic
+                    value={2.7}
+                    valueStyle={{
+                      color: "#3f8600",
+                      fontSize: "13px",
+                      display: "flex",
+                      position:"absolute",
+                      top:"0rem",
+                      left:"0.2rem"
+                    }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="%"
+                  />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Space>
       </div>
