@@ -59,7 +59,7 @@ const Dashboard = () => {
                   <Statistic
                     value={1.5}
                     valueStyle={{
-                      color: "#3f8600",
+                      color: "#0c4900",
                       fontSize: "13px",
                       display: "flex",
                       position:"absolute",
@@ -113,7 +113,7 @@ const Dashboard = () => {
                   <Statistic
                     value={2.1}
                     valueStyle={{
-                      color: "#3f8600",
+                      color: "#0c4900",
                       fontSize: "13px",
                       display: "flex",
                       position:"absolute",
@@ -166,7 +166,7 @@ const Dashboard = () => {
                   <Statistic
                     value={2.7}
                     valueStyle={{
-                      color: "#3f8600",
+                      color: "#0c4900",
                       fontSize: "13px",
                       display: "flex",
                       position:"absolute",
