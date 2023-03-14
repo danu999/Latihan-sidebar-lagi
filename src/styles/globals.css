@@ -221,7 +221,7 @@ body {
   margin-right: 5rem;
   margin-left: 0.8rem;
   border-radius: 5%;
-  background: linear-gradient(to bottom right, #f5ff98, #ffcf00);
+  background: linear-gradient(to bottom right, #ffffff, #e6e5e1);
 }
 
 .kas {
@@ -259,7 +259,7 @@ body {
 /* Chart */
 .mixed-chart {
   margin-top: 7rem;
-  color: #0a0801;
+  color: #c5c5c5;
 }
 
 /* .Card-chart {

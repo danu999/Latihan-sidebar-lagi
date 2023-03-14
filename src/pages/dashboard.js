@@ -6,6 +6,7 @@ import { BsFillCreditCardFill, BsThreeDotsVertical } from "react-icons/bs";
 import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import BaseLayout from "@/components/BaseLayout";
 import Chart from "@/components/Chartlabarugi";
+import Neraca from "@/components/Grafikneraca";
 
 const Dashboard = () => {
   return (
@@ -192,6 +193,7 @@ const Dashboard = () => {
           </Card>
         </Space>
         <Chart />
+        <Neraca />
       </div>
     </BaseLayout>
   );
