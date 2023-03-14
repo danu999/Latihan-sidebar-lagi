@@ -45,14 +45,17 @@ function GrafikBalok() {
       },
     ],
   });
+  const options = {
+    
+  }
 
   return (
     <div
       className="Appdua"
-      style={{ width: "700px", height: "500px", paddingTop: "7rem", }}
+      style={{ width: "700px", height: "500px", paddingTop: "7rem", display: "inline-block", marginLeft: "55rem" }}
     >
       <Typography style={{ fontSize: "1.5" }}>Grafik Neraca</Typography>
-      <Bar data={data} />
+      <Bar data={data} options={options} />
     </div>
   );
 }

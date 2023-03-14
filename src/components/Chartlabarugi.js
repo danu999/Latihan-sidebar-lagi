@@ -50,7 +50,7 @@ function App() {
   return (
     <div
       className="App"
-      style={{ width: "700px", height: "500px", paddingTop: "7rem" }}
+      style={{ width: "700px", height: "500px", paddingTop: "7rem", position: "absolute" }}
     >
       <Typography style={{ fontSize: "1.5" }}>Grafik Laba Rugi</Typography>
       <Line data={data} ></Line>
