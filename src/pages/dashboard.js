@@ -7,6 +7,9 @@ import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import BaseLayout from "@/components/BaseLayout";
 import Chart from "@/components/Chartlabarugi";
 import Neraca from "@/components/Grafikneraca";
+import Lajur from "@/components/NeracaLajur";
+import Kas from "@/components/ArusKas";
+import TableDA from "@/components/TableDataAkun";
 
 const Dashboard = () => {
   return (
@@ -194,6 +197,9 @@ const Dashboard = () => {
         </Space>
         <Chart />
         <Neraca />
+        <Lajur />
+        <Kas />
+        <TableDA />
       </div>
     </BaseLayout>
   );

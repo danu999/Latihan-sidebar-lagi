@@ -31,7 +31,7 @@ function GrafikBalok() {
     ],
     datasets: [
       {
-        label: "Neraca",
+        label: "Neraca - 2023",
         data: [65, 59, 80, 81, 56, 55, 40, 44, 66, 55, 44, 77],
         backgroundColor: "grey",
         borderColor: "yellow",
