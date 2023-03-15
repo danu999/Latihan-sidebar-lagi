@@ -75,8 +75,6 @@ function App() {
         width: "700px",
         height: "500px",
         paddingTop: "7rem",
-        position: "absolute",
-        marginLeft: "52rem",
       }}
     >
       <Typography style={{ fontSize: "1.7rem" }}>Grafik Arus Kas</Typography>

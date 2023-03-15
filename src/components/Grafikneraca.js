@@ -43,13 +43,11 @@ function GrafikBalok() {
 
   return (
     <div
-      className="Appdua"
+      className="App"
       style={{
         width: "700px",
         height: "500px",
         paddingTop: "7rem",
-        display: "inline-block",
-        marginLeft: "52rem",
       }}
     >
       <Typography style={{ fontSize: "1.7rem" }}>Grafik Neraca</Typography>

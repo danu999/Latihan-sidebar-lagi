@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Card, Space, Statistic, Col, Row, Typography } from "antd";
+import { Card, Space, Statistic, Col, Row, Modal } from "antd";
 import { Paper } from "@mui/material";
 import React from "react";
+import { useState } from "react";
 import { BsFillCreditCardFill, BsThreeDotsVertical } from "react-icons/bs";
 import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import BaseLayout from "@/components/BaseLayout";
@@ -10,14 +11,17 @@ import Neraca from "@/components/Grafikneraca";
 import Lajur from "@/components/NeracaLajur";
 import Kas from "@/components/ArusKas";
 import TableDA from "@/components/TableDataAkun";
+import TableJN from "@/components/TableJurnal";
 
 const Dashboard = () => {
+  // const [modalOpen, setModalOpen] = useState(false);
   return (
     <BaseLayout>
       <div className="dashboard">
         <h1>Dashboard</h1>
         <Space direction="horizontal">
           <Card
+            onClick={() => setModalOpen(true)}
             className="card"
             style={{
               boxShadow: "2px 3px 15px 3px #A9A9A9",
@@ -139,6 +143,7 @@ const Dashboard = () => {
             </Row>
           </Card>
         </Space>
+
         <Space direction="horizontal">
           <Card
             className="card"
@@ -195,12 +200,13 @@ const Dashboard = () => {
             </Row>
           </Card>
         </Space>
-        <Chart />
-        <Neraca />
-        <Lajur />
-        <Kas />
-        <TableDA />
       </div>
+      <Chart />
+      <Neraca />
+      <Lajur />
+      <Kas />
+      <TableDA />
+      <TableJN />
     </BaseLayout>
   );
 };

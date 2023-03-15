@@ -56,7 +56,6 @@ function App() {
         width: "700px",
         height: "500px",
         paddingTop: "7rem",
-        position: "absolute",
       }}
     >
       <Typography style={{ fontSize: "1.7rem" }}>Grafik Laba Rugi</Typography>

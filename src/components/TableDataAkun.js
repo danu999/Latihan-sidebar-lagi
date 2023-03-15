@@ -1,3 +1,4 @@
+import { BgColorsOutlined } from "@ant-design/icons";
 import { Table, Typography } from "antd";
 
 const columns = [
@@ -45,10 +46,26 @@ const data = [
   },
 ];
 const App = () => (
-  <Table
-    columns={columns}
-    dataSource={data}
-    style={{ width: "43rem", marginTop: "38rem" }}
-  />
+  <div
+    className="App"
+    style={{
+      width: "700px",
+      height: "500px",
+      paddingTop: "7rem",
+    }}
+  >
+    <Typography style={{ fontSize: "1.7rem", marginBottom: "1rem" }}>
+      Daftar Akun
+    </Typography>
+    <Table
+      columns={columns}
+      dataSource={data}
+      style={{
+        width: "43rem",
+        backgroundColor: "#ffcf00",
+      }}
+    ></Table>
+  </div>
 );
+
 export default App;
