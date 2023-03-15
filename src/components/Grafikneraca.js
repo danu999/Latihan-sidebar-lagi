@@ -11,13 +11,7 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip,
-  Legend
-)
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 function GrafikBalok() {
   const [data, setData] = useState({
@@ -45,16 +39,20 @@ function GrafikBalok() {
       },
     ],
   });
-  const options = {
-    
-  }
+  const options = {};
 
   return (
     <div
       className="Appdua"
-      style={{ width: "700px", height: "500px", paddingTop: "7rem", display: "inline-block", marginLeft: "55rem" }}
+      style={{
+        width: "700px",
+        height: "500px",
+        paddingTop: "7rem",
+        display: "inline-block",
+        marginLeft: "52rem",
+      }}
     >
-      <Typography style={{ fontSize: "1.5" }}>Grafik Neraca</Typography>
+      <Typography style={{ fontSize: "1.7rem" }}>Grafik Neraca</Typography>
       <Bar data={data} options={options} />
     </div>
   );
