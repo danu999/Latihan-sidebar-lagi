@@ -17,11 +17,11 @@ const Dashboard = () => {
   // const [modalOpen, setModalOpen] = useState(false);
   return (
     <BaseLayout>
-      <div className="dashboard">
+      <div className="header">
         <h1>Dashboard</h1>
         <Space direction="horizontal">
           <Card
-            onClick={() => setModalOpen(true)}
+            // onClick={() => setModalOpen(true)}
             className="card"
             style={{
               boxShadow: "2px 3px 15px 3px #A9A9A9",
